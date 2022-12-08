@@ -46,8 +46,8 @@ export const StyledButton = styled(Button)(()=>({
     justifyContent:'center',
     marginTop:'20px'
 }))
-export const StyledDelete = styled(Box)(()=>({
-    background:'#cb444a',
+export const StyledEdit = styled(Box)(()=>({
+    background:'#347bf6',
     width:'30px',
     height:'30px',
     marginRight:'10px',

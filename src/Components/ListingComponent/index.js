@@ -24,13 +24,14 @@ const ListingComponent = ({userObj, handleUpdateData, deleteUserFunc}) => {
             </Style.StyledPhone>
         </Style.StyledNameContactParent>
         <Style.StyledEditDeleteParent>
-            <UserFormComponent 
+            <UserFormComponent
                 userObj={userObj}
                 isEdit={true}
                 handleSubmitData={handleSubmitData}
             />
             <DeleteUserComponent 
                 userId={userObj?.id}
+                userObj={userObj}
                 deleteUser={deleteUser}
                 message='Do you really want to delete it?'
             />

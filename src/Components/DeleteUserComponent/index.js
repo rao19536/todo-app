@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle'
 import { Box } from '@mui/material'
 import * as Style from './style'
 
-export default function DeleteUserComponent({userId, deleteUser, message}) {
+export default function DeleteUserComponent({userId, userObj, deleteUser, message}) {
   const [open, setOpen] = useState(false)
   
   const handleClickOpen = () => {
@@ -18,7 +18,7 @@ export default function DeleteUserComponent({userId, deleteUser, message}) {
     setOpen(false)
   }
   const handleDelete = () =>{
-    deleteUser(userId)
+    deleteUser(userObj, userId)
     setOpen(false)
   }
 

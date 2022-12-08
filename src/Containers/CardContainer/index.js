@@ -27,8 +27,10 @@ const ListingContainer = () => {
     setSuccessMessage('Contact Updated Successfully')
     setIsOpen(true)
   } 
-  const deleteUserFunc = (uID) => {
-    setUserInfo(userInfo.filter(val=> val.id !== uID))
+  const deleteUserFunc = (data, uID) => {
+    // setUserInfo(userInfo.filter(val=> val.id !== uID))
+    const findIndex = userInfo.findIndex(val=>uID===val.id)
+    setUserInfo([...userInfo.slice(0, findIndex), ...userInfo.slice(findIndex+1)])
     setSuccessMessage('Contact Deleted Successfully')
     setIsOpen(true)
   }

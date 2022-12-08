@@ -43,9 +43,9 @@ const UserFormComponent = ({isEdit, userObj, handleSubmitData}) => {
         Register User
       </Style.StyledAddContactButton>
       ):(
-        <Style.StyledDelete onClick={handleOpen}>
+        <Style.StyledEdit onClick={handleOpen}>
           <EditIcon />
-        </Style.StyledDelete>
+        </Style.StyledEdit>
       )}
       <Modal
         open={open}
